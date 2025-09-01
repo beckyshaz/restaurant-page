@@ -1,0 +1,1 @@
+This is a file containing a project created using js and bundled using webpack, the project is a restaurant page
