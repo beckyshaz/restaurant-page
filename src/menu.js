@@ -14,6 +14,14 @@ import lunchImg3 from "./images/estonia-incorporated-H87-bsjeIZA-unsplash.jpg";
 
 import lunchImg4 from "./images/jinish-shah-yxZlyvmqORo-unsplash.jpg";
 
+import dinnerImg1 from "./images/bojitha-wimalasiri-VxM1tevoDlA-unsplash.jpg";
+
+import dinnerImg2 from "./images/jay-nlper-z6dhO2AS9iM-unsplash.jpg";
+
+import dinnerImg3 from "./images/tuva-mathilde-loland-OCLr-Sr-Wko-unsplash.jpg";
+
+import dinnerImg4 from "./images/yoseph-hailu-WUcEKK48JMU-unsplash.jpg";
+
 export function loadMenuPage() {
 
     const menuOuterDiv = document.createElement("div");
@@ -146,7 +154,72 @@ export function loadMenuPage() {
 
     lunchDiv.append(firstLunchMealDiv, secondLunchMealDiv, thirdLunchMealDiv, fourthLunchMealDiv);
 
-    menuOuterDiv.append(menu, breakfastTitle, breakfastDiv, lunchTitle, lunchDiv);
+    const dinnerTitle = document.createElement("h2");
+    dinnerTitle.innerHTML = "Dinner";
+    dinnerTitle.classList = "dinner-title";
+
+    const dinnerDiv = document.createElement("div");
+    dinnerDiv.classList = "dinner-container";
+
+
+    const firstDinnerMealDiv = document.createElement("div");
+    firstDinnerMealDiv.classList = "first-dinner-meal-container";
+
+    const firstDinnerMeal = document.createElement("img");
+    firstDinnerMeal.src = dinnerImg1;
+    firstDinnerMeal.width = 300;
+    firstDinnerMeal.height = 300;
+
+    const firstDinnerMealDescription = document.createElement("p");
+    firstDinnerMealDescription.innerHTML = "Corn on the cob and Crubs";
+
+    firstDinnerMealDiv.append(firstDinnerMeal, firstDinnerMealDescription);
+
+
+    const secondDinnerMealDiv = document.createElement("div");
+    secondDinnerMealDiv.classList = "second-dinner-meal-container";
+
+    const secondDinnerMeal = document.createElement("img");
+    secondDinnerMeal.src = dinnerImg2;
+    secondDinnerMeal.width = 300;
+    secondDinnerMeal.height = 300;
+
+    const secondDinnerMealDescription = document.createElement("p");
+    secondDinnerMealDescription.innerHTML = "Pasta";
+
+    secondDinnerMealDiv.append(secondDinnerMeal, secondDinnerMealDescription);
+
+    const thirdDinnerMealDiv = document.createElement("div");
+    thirdDinnerMealDiv.classList = "third-dinner-meal-container";
+
+    const thirdDinnerMeal = document.createElement("img");
+    thirdDinnerMeal.src = dinnerImg3;
+    thirdDinnerMeal.width = 300;
+    thirdDinnerMeal.height = 300;
+
+    const thirdDinnerMealDescription = document.createElement("p");
+    thirdDinnerMealDescription.innerHTML = "Chicken and Damplings";
+
+    thirdDinnerMealDiv.append(thirdDinnerMeal, thirdDinnerMealDescription);
+
+    const fourthDinnerMealDiv = document.createElement("div");
+    fourthDinnerMealDiv.classList = "fourth-dinner-meal-container";
+
+    const fourthDinnerMeal = document.createElement("img");
+    fourthDinnerMeal.src = dinnerImg4;
+    fourthDinnerMeal.width = 300;
+    fourthDinnerMeal.height = 300;
+
+    const fourthDinnerMealDescription = document.createElement("p");
+    fourthDinnerMealDescription.innerHTML = "Brunswick stew";
+
+    fourthDinnerMealDiv.append(fourthDinnerMeal, fourthDinnerMealDescription);
+
+
+    dinnerDiv.append(firstDinnerMealDiv, secondDinnerMealDiv, thirdDinnerMealDiv, fourthDinnerMealDiv);
+
+
+    menuOuterDiv.append(menu, breakfastTitle, breakfastDiv, lunchTitle, lunchDiv, dinnerTitle, dinnerDiv);
 
     const container = document.querySelector("#content");
     container.appendChild(menuOuterDiv);
