@@ -49,11 +49,14 @@ export function loadMenuPage() {
     firstMealImg.src = firstImg;
     firstMealImg.width = 300;
     firstMealImg.height = 300;
+
+    const price1 = document.createElement("h3");
+    price1.textContent = "$ 10";
     
     const firstMealDescription = document.createElement("p");
     firstMealDescription.innerHTML = "Hash browns"
 
-    firstMealDiv.append(firstMealImg, firstMealDescription);
+    firstMealDiv.append(firstMealImg, firstMealDescription, price1);
 
     const secondMealDiv = document.createElement("div");
     const secondMealImg = document.createElement("img");
@@ -61,10 +64,13 @@ export function loadMenuPage() {
     secondMealImg.width = 300;
     secondMealImg.height = 300;
     
+    const price2 = document.createElement("h3");
+    price2.textContent = "$ 10";
+
     const secondMealDescription = document.createElement("p");
     secondMealDescription.innerHTML = "Bagel and Cream Cheese";
 
-    secondMealDiv.append(secondMealImg, secondMealDescription);
+    secondMealDiv.append(secondMealImg, secondMealDescription, price2);
 
     const thirdMealDiv = document.createElement("div");
     const thirdMealImg = document.createElement("img");
@@ -72,10 +78,13 @@ export function loadMenuPage() {
     thirdMealImg.width = 300;
     thirdMealImg.height = 300;
     
+    const price3 = document.createElement("h3");
+    price3.textContent = "$ 15";
+
     const thirdMealDescription = document.createElement("p");
     thirdMealDescription.innerHTML = "chicken and waffles";
 
-    thirdMealDiv.append(thirdMealImg, thirdMealDescription);
+    thirdMealDiv.append(thirdMealImg, thirdMealDescription, price3);
 
 
     const fourthMealDiv = document.createElement("div");
@@ -84,9 +93,12 @@ export function loadMenuPage() {
     fourthMealImg.width = 300;
     fourthMealImg.height = 300;
     
+    const price4 = document.createElement("h3");
+    price4.textContent = "$ 11";
+
     const fourthMealDescription = document.createElement("p");
     fourthMealDescription.innerHTML = "Creamed eggs on toast";
-    fourthMealDiv.append(fourthMealImg, fourthMealDescription);
+    fourthMealDiv.append(fourthMealImg, fourthMealDescription, price4);
 
     breakfastDiv.append(firstMealDiv, secondMealDiv, thirdMealDiv, fourthMealDiv);
 
@@ -106,10 +118,13 @@ export function loadMenuPage() {
     firstLunchMeal.width = 300;
     firstLunchMeal.height = 300;
 
+    const price5 = document.createElement("h3");
+    price5.textContent = "$ 12";
+
     const firstLunchMealDescription = document.createElement("p");
     firstLunchMealDescription.innerHTML = "Chicken-fried steak";
 
-    firstLunchMealDiv.append(firstLunchMeal, firstLunchMealDescription);
+    firstLunchMealDiv.append(firstLunchMeal, firstLunchMealDescription, price5);
 
 
     const secondLunchMealDiv = document.createElement("div");
@@ -120,10 +135,13 @@ export function loadMenuPage() {
     secondLunchMeal.width = 300;
     secondLunchMeal.height = 300;
 
+    const price6 = document.createElement("h3");
+    price6.textContent = "$ 9";
+
     const secondLunchMealDescription = document.createElement("p");
     secondLunchMealDescription.innerHTML = "Hamburgers";
 
-    secondLunchMealDiv.append(secondLunchMeal, secondLunchMealDescription);
+    secondLunchMealDiv.append(secondLunchMeal, secondLunchMealDescription, price6);
 
     const thirdLunchMealDiv = document.createElement("div");
     thirdLunchMealDiv.classList = "first-lunch-meal-container";
@@ -133,10 +151,13 @@ export function loadMenuPage() {
     thirdLunchMeal.width = 300;
     thirdLunchMeal.height = 300;
 
+    const price7 = document.createElement("h3");
+    price7.textContent = "$ 15";
+
     const thirdLunchMealDescription = document.createElement("p");
     thirdLunchMealDescription.innerHTML = "Cobb salad";
 
-    thirdLunchMealDiv.append(thirdLunchMeal, thirdLunchMealDescription);
+    thirdLunchMealDiv.append(thirdLunchMeal, thirdLunchMealDescription, price7);
 
     const fourthLunchMealDiv = document.createElement("div");
     fourthLunchMealDiv.classList = "fourth-lunch-meal-container";
@@ -146,10 +167,13 @@ export function loadMenuPage() {
     fourthLunchMeal.width = 300;
     fourthLunchMeal.height = 300;
 
+    const price8 = document.createElement("h3");
+    price8.textContent = "$ 5";
+
     const fourthLunchMealDescription = document.createElement("p");
     fourthLunchMealDescription.innerHTML = "Chicken nugget";
 
-    fourthLunchMealDiv.append(fourthLunchMeal, fourthLunchMealDescription);
+    fourthLunchMealDiv.append(fourthLunchMeal, fourthLunchMealDescription, price8);
 
 
     lunchDiv.append(firstLunchMealDiv, secondLunchMealDiv, thirdLunchMealDiv, fourthLunchMealDiv);
@@ -170,10 +194,13 @@ export function loadMenuPage() {
     firstDinnerMeal.width = 300;
     firstDinnerMeal.height = 300;
 
+    const price9 = document.createElement("h3");
+    price9.textContent = "$ 3";
+
     const firstDinnerMealDescription = document.createElement("p");
     firstDinnerMealDescription.innerHTML = "Corn on the cob and Crubs";
 
-    firstDinnerMealDiv.append(firstDinnerMeal, firstDinnerMealDescription);
+    firstDinnerMealDiv.append(firstDinnerMeal, firstDinnerMealDescription, price9);
 
 
     const secondDinnerMealDiv = document.createElement("div");
@@ -184,10 +211,13 @@ export function loadMenuPage() {
     secondDinnerMeal.width = 300;
     secondDinnerMeal.height = 300;
 
+    const price10 = document.createElement("h3");
+    price10.textContent = "$ 10";
+
     const secondDinnerMealDescription = document.createElement("p");
     secondDinnerMealDescription.innerHTML = "Pasta";
 
-    secondDinnerMealDiv.append(secondDinnerMeal, secondDinnerMealDescription);
+    secondDinnerMealDiv.append(secondDinnerMeal, secondDinnerMealDescription, price10);
 
     const thirdDinnerMealDiv = document.createElement("div");
     thirdDinnerMealDiv.classList = "third-dinner-meal-container";
@@ -197,10 +227,13 @@ export function loadMenuPage() {
     thirdDinnerMeal.width = 300;
     thirdDinnerMeal.height = 300;
 
+    const price11 = document.createElement("h3");
+    price11.textContent = "$ 4";
+
     const thirdDinnerMealDescription = document.createElement("p");
     thirdDinnerMealDescription.innerHTML = "Chicken and Damplings";
 
-    thirdDinnerMealDiv.append(thirdDinnerMeal, thirdDinnerMealDescription);
+    thirdDinnerMealDiv.append(thirdDinnerMeal, thirdDinnerMealDescription, price11);
 
     const fourthDinnerMealDiv = document.createElement("div");
     fourthDinnerMealDiv.classList = "fourth-dinner-meal-container";
@@ -210,10 +243,13 @@ export function loadMenuPage() {
     fourthDinnerMeal.width = 300;
     fourthDinnerMeal.height = 300;
 
+    const price12= document.createElement("h3");
+    price12.textContent = "$ 2";
+
     const fourthDinnerMealDescription = document.createElement("p");
     fourthDinnerMealDescription.innerHTML = "Brunswick stew";
 
-    fourthDinnerMealDiv.append(fourthDinnerMeal, fourthDinnerMealDescription);
+    fourthDinnerMealDiv.append(fourthDinnerMeal, fourthDinnerMealDescription, price12);
 
 
     dinnerDiv.append(firstDinnerMealDiv, secondDinnerMealDiv, thirdDinnerMealDiv, fourthDinnerMealDiv);
