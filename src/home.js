@@ -2,6 +2,8 @@ import restaurantImg from "./images/kayleigh-harrington-yhn4okt6ci0-unsplash.jpg
 
 //import { loadContacts } from "./contact.js";
 
+import { loadMenuPage } from "./menu";
+
 import foodIcon1 from "./images/tuva-mathilde-loland-OCLr-Sr-Wko-unsplash.jpg";
 import foofIcon2 from "./images/randy-fath-SQ20tWzxXO0-unsplash.jpg";
 import foodIcon3 from "./images/iason-raissis-jLxPs1kBmZI-unsplash.jpg";
@@ -168,11 +170,12 @@ export function loadHomePage() {
     homeAboutHoursDiv.append(hoursDiv, homeAbout);
 
 
-    const favDishtitle = document.createElement("h1");
-    favDishtitle.textContent = "Favourite Dishes";
+    const favDishtitle = document.createElement("div");
+    favDishtitle.classList = "fav-dishes-title";
+    favDishtitle.innerHTML = `<h1>Favourite Dishes</h1>`;
 
     const favFoodDiv1 = document.createElement("div");
-    favFoodDiv1.className = ""
+    favFoodDiv1.className = "fave-food";
 
 
     const favFoodImage1 = document.createElement("img");
@@ -186,12 +189,11 @@ export function loadHomePage() {
     const favFoodPrice = document.createElement("h3");
     favFoodPrice.textContent = "$ 10";
 
-    const favFoodDescription = document.createElement("p");
-    favFoodDescription.textContent = "Great meal prepared with traditional ingredients";
 
-    favFoodDiv1.append(favFoodImage1, favFoodName1, favFoodPrice, favFoodDescription);
+    favFoodDiv1.append(favFoodImage1, favFoodName1, favFoodPrice);
 
     const favFoodDiv2 = document.createElement("div");
+    favFoodDiv2.classList = "fave-food";
 
 
     const favFoodImage2 = document.createElement("img");
@@ -205,12 +207,10 @@ export function loadHomePage() {
     const favFoodPrice1 = document.createElement("h3");
     favFoodPrice1.textContent = "$ 15";
 
-    const favFoodDescription1 = document.createElement("p");
-    favFoodDescription1.textContent = "Wonderful flavours blended together to make your mouth water";
-
-    favFoodDiv2.append(favFoodImage2,favFoodName2, favFoodPrice1, favFoodDescription1);
+    favFoodDiv2.append(favFoodImage2,favFoodName2, favFoodPrice1);
 
     const favFoodDiv3 = document.createElement("div");
+    favFoodDiv3.className = "fave-food";
 
 
     const favFoodImage3 = document.createElement("img");
@@ -224,30 +224,33 @@ export function loadHomePage() {
     const favFoodPrice2 = document.createElement("h3");
     favFoodPrice2.textContent = "$ 9";
 
-    const favFoodDescription2 = document.createElement("p");
-    favFoodDescription2.textContent = "This is prepared in a traditional way with traditional ingredients";
-
-    favFoodDiv3.append(favFoodImage3, favFoodName3, favFoodPrice2, favFoodDescription2);
-
+    favFoodDiv3.append(favFoodImage3, favFoodName3, favFoodPrice2);
 
     const favourteDishesMeal = document.createElement("div");
     favourteDishesMeal.className = "favourite-container";
 
     favourteDishesMeal.append(favFoodDiv1, favFoodDiv2, favFoodDiv3);
+    
 
     const moreDishesButton = document.createElement("button");
     moreDishesButton.classList = "more-dishes";
     moreDishesButton.textContent = "view All";
 
+    //moreDishesButton.addEventListener("click", );
 
-    
+
+    const favouriteDishesOuterDiv = document.createElement("div");
+    favouriteDishesOuterDiv.className = "favourite-dish-outer-div";
+
+    favouriteDishesOuterDiv.append(favourteDishesMeal, moreDishesButton);
+
     const footer = document.createElement("footer");
-    footer.textContent = "@tublusandshaz";
+    footer.innerHTML = `<h3>@tublusandshaz</h3>`;
     
     const homeDiv = document.createElement("div");
     homeDiv.classList = "home-container";
     homeDiv.append(heroSection, homeContactDiv, homeAboutHoursDiv, favDishtitle,
-        favourteDishesMeal, moreDishesButton,  footer);
+        favouriteDishesOuterDiv,  footer);
 
     container.appendChild(homeDiv);
 
