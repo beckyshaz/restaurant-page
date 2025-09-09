@@ -3,6 +3,7 @@ export function loadAboutUsPage() {
     const aboutUsDiv = document.createElement("div");
     aboutUsDiv.classList = "about-container";
     const aboutUsTitle = document.createElement("h1");
+    aboutUsTitle.className = "about-title";
     aboutUsTitle.innerHTML = "About Us";
     const bold = document.createElement("strong");
     bold.textContent = "Tublus And Shaz Restaurant";

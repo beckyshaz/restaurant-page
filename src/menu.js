@@ -24,6 +24,8 @@ import dinnerImg4 from "./images/yoseph-hailu-WUcEKK48JMU-unsplash.jpg";
 
 export function loadMenuPage() {
 
+   //const heroSection = document.querySelector(".hero-section");
+
     const menuOuterDiv = document.createElement("div");
 
     menuOuterDiv.classList = "menu-outer-container";
@@ -42,9 +44,10 @@ export function loadMenuPage() {
     breakfastTitle.innerHTML = "Breakfast";
 
     const breakfastDiv = document.createElement("div");
-    breakfastDiv.classList = "breakfast-meal-container";
+    breakfastDiv.classList = "breakfast-container";
 
     const firstMealDiv = document.createElement("div");
+    firstMealDiv.className = "meal-div";
     const firstMealImg = document.createElement("img");
     firstMealImg.src = firstImg;
     firstMealImg.width = 300;
@@ -59,6 +62,7 @@ export function loadMenuPage() {
     firstMealDiv.append(firstMealImg, firstMealDescription, price1);
 
     const secondMealDiv = document.createElement("div");
+    secondMealDiv.className = "meal-div";
     const secondMealImg = document.createElement("img");
     secondMealImg.src = secondImg;
     secondMealImg.width = 300;
@@ -73,6 +77,7 @@ export function loadMenuPage() {
     secondMealDiv.append(secondMealImg, secondMealDescription, price2);
 
     const thirdMealDiv = document.createElement("div");
+    thirdMealDiv.classList = "meal-div";
     const thirdMealImg = document.createElement("img");
     thirdMealImg.src = thirdImg;
     thirdMealImg.width = 300;
@@ -88,6 +93,7 @@ export function loadMenuPage() {
 
 
     const fourthMealDiv = document.createElement("div");
+    fourthMealDiv.className = "meal-div";
     const fourthMealImg = document.createElement("img");
     fourthMealImg.src = fourthImg;
     fourthMealImg.width = 300;

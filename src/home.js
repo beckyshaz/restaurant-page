@@ -1,4 +1,4 @@
-import restaurantImg from "./images/kayleigh-harrington-yhn4okt6ci0-unsplash.jpg";
+//import restaurantImg from "./images/kayleigh-harrington-yhn4okt6ci0-unsplash.jpg";
 
 //import { loadContacts } from "./contact.js";
 
@@ -30,13 +30,13 @@ export function loadHomePage() {
     tag.classList = "tagline";
     tag.innerHTML = "Where your taste buds meets great Vibes!";
     
-    const heroSection = document.createElement("div");
-    heroSection.className = "hero-section";
-    heroSection.style.backgroundImage = `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(${restaurantImg})`;
+    const heroSection = document.querySelector(".hero-section");
+    //heroSection.className = "hero-section";
+   /* heroSection.style.backgroundImage = `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(${restaurantImg})`;
     heroSection.style.backgroundSize = "cover";
     heroSection.style.backgroundPosition = "center";
     heroSection.style.height = "90vh";
-    heroSection.style.color = "white";
+    heroSection.style.color = "white";*/
    
     
 
@@ -153,14 +153,17 @@ export function loadHomePage() {
     workingHours3.append(day3, workingTime2);
 
     const hoursDiv = document.createElement("div");
+    hoursDiv.classList = "hours-div";
 
     hoursDiv.append(hoursTitle, workingHours1, weekendHours, workingHours2, workingHours3);
 
     const homeAbout = document.createElement("div");
     homeAbout.className = "home-about";
-    homeAbout.innerHTML = `<em class=about-emphasy>What we offer your taste buds</em>
+    homeAbout.innerHTML = `<h3 class=about-emphasy>What we offer your taste buds</h3>
+    <br>
     <p> At <em class=restaurant-name>Tublus And Shaz Restaurant</em> we take pride in offering a diverse and dynamic and unique menu that
     satisfies both adventurous food lovers and those who enjoy classic flavors.</p>
+    <br>
     <p>Indulge in our delicious roasted pork extravaganza done over a charcoal pit preserving all the  magnificent flavours</p>
     `;
 
@@ -244,13 +247,13 @@ export function loadHomePage() {
 
     favouriteDishesOuterDiv.append(favourteDishesMeal, moreDishesButton);
 
-    const footer = document.createElement("footer");
-    footer.innerHTML = `<h3>@tublusandshaz</h3>`;
+    //const footer = document.createElement("footer");
+    //footer.innerHTML = `<h3>@tublusandshaz</h3>`;
     
     const homeDiv = document.createElement("div");
     homeDiv.classList = "home-container";
-    homeDiv.append(heroSection, homeContactDiv, homeAboutHoursDiv, favDishtitle,
-        favouriteDishesOuterDiv,  footer);
+    homeDiv.append(homeContactDiv, homeAboutHoursDiv, favDishtitle,
+        favouriteDishesOuterDiv);
 
     container.appendChild(homeDiv);
 
