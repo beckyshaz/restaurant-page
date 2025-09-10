@@ -19,24 +19,18 @@ const buttons = document.querySelectorAll("button");
 function buttonClickTracker(event) {
     
     if (event.target.classList.contains("home")) {
-        //const heroSection = document.querySelector(".hero-section");
-        //heroSection.innerHTML = "";
-        //const container = document.querySelector("#content");
         container.innerHTML = "";
         loadHomePage();
     }
     else if (event.target.className === "menu-button") {
-        //const container = document.querySelector("#content");
         container.innerHTML = "";
         loadMenuPage();
     }
     else if (event.target.className === "about") {
-        //const container = document.querySelector("#content");
         container.innerHTML = "";
         loadAboutUsPage();
     }
     else if (event.target.className === "contact") {
-        //const container = document.querySelector("#content");
         container.innerHTML = "";
         loadContacts();
     }
@@ -46,9 +40,3 @@ function buttonClickTracker(event) {
 buttons.forEach(button => {
    button.addEventListener("click", buttonClickTracker);
 });
-
-
-//loadHomePage();
-//loadMenuPage();
-//loadAboutUsPage();
-//loadContacts();

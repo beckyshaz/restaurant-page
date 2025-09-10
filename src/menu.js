@@ -24,7 +24,6 @@ import dinnerImg4 from "./images/yoseph-hailu-WUcEKK48JMU-unsplash.jpg";
 
 export function loadMenuPage() {
 
-   //const heroSection = document.querySelector(".hero-section");
 
     const menuOuterDiv = document.createElement("div");
 
@@ -35,9 +34,7 @@ export function loadMenuPage() {
     menu.classList = "menu";
 
     menu.innerHTML = "Menu";
-
-    //container.innerHTML = "";
-    
+ 
     const breakfastTitle = document.createElement("h2");
 
     breakfastTitle.classList = "breakfast-title";

@@ -19,6 +19,13 @@ export function loadHomePage() {
 
     const container = document.querySelector("#content");
 
+    const viewMenuButton = document.querySelector(".view-menu");
+    viewMenuButton.addEventListener("click", () => {
+        container.innerHTML = "";
+        loadMenuPage();
+    });
+
+
     const location = document.createElement("img");
     location.src = locationIcon;
     location.width = 40;
@@ -147,7 +154,7 @@ export function loadHomePage() {
     favFoodImage1.width = 300;
 
     const favFoodName1 = document.createElement("p");
-    favFoodName1.textContent = "Lusagna and Steak";
+    favFoodName1.textContent = "Chicken and Damplings";
 
     const favFoodPrice = document.createElement("h3");
     favFoodPrice.textContent = "$ 10";
@@ -165,7 +172,7 @@ export function loadHomePage() {
     favFoodImage2.width = 300;
 
     const favFoodName2 = document.createElement("p");
-    favFoodName2.textContent = "Taco salad";
+    favFoodName2.textContent = "Creamed Eggs on Toast";
 
     const favFoodPrice1 = document.createElement("h3");
     favFoodPrice1.textContent = "$ 15";
@@ -182,7 +189,7 @@ export function loadHomePage() {
     favFoodImage3.width = 300;
 
     const favFoodName3 = document.createElement("p");
-    favFoodName3.textContent = "Macaroni and Cheese";
+    favFoodName3.textContent = "Waffles and fruits";
 
     const favFoodPrice2 = document.createElement("h3");
     favFoodPrice2.textContent = "$ 9";
@@ -199,7 +206,7 @@ export function loadHomePage() {
     moreDishesButton.classList = "more-dishes";
     moreDishesButton.textContent = "view All";
 
-    //moreDishesButton.addEventListener("click", );
+    moreDishesButton.addEventListener("click", loadMenuPage);
 
 
     const favouriteDishesOuterDiv = document.createElement("div");
