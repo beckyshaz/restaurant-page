@@ -19,6 +19,8 @@ const buttons = document.querySelectorAll("button");
 function buttonClickTracker(event) {
     
     if (event.target.classList.contains("home")) {
+        //const heroSection = document.querySelector(".hero-section");
+        //heroSection.innerHTML = "";
         //const container = document.querySelector("#content");
         container.innerHTML = "";
         loadHomePage();

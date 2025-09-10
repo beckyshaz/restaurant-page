@@ -19,46 +19,6 @@ export function loadHomePage() {
 
     const container = document.querySelector("#content");
 
-    const name = document.createElement("h1");
-
-    name.classList = "title";
-
-    name.textContent = "Welcome to Tublus and Shaz Restaurant.";
-    //name.style.whiteSpace = "pre-line";
-
-    const tag = document.createElement("em");
-    tag.classList = "tagline";
-    tag.innerHTML = "Where your taste buds meets great Vibes!";
-    
-    const heroSection = document.querySelector(".hero-section");
-    //heroSection.className = "hero-section";
-   /* heroSection.style.backgroundImage = `linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(${restaurantImg})`;
-    heroSection.style.backgroundSize = "cover";
-    heroSection.style.backgroundPosition = "center";
-    heroSection.style.height = "90vh";
-    heroSection.style.color = "white";*/
-   
-    
-
-    const viewMenuButton = document.createElement("button");
-    viewMenuButton.classList = "view-menu";
-    viewMenuButton.textContent = "View Menu";
-
-
-    const description = document.createElement("p");
-    description.classList = "description";
-
-    description.innerHTML = `Tublus and Shaz Restaurant is culture based eatery. We believe in farm to fork. 
-    This is a place you can relax with family, friends and even acquintances while enjoying 
-    the beautiful sceneries that we have like trees and even lakes. We are serving fresh, hot and delicious meals
-    everyday. Come taste the difference`;
-
-    const header = document.querySelector("header");
-
-
-    heroSection.append(header, name, tag, description, viewMenuButton);
-
-
     const location = document.createElement("img");
     location.src = locationIcon;
     location.width = 40;
@@ -246,9 +206,6 @@ export function loadHomePage() {
     favouriteDishesOuterDiv.className = "favourite-dish-outer-div";
 
     favouriteDishesOuterDiv.append(favourteDishesMeal, moreDishesButton);
-
-    //const footer = document.createElement("footer");
-    //footer.innerHTML = `<h3>@tublusandshaz</h3>`;
     
     const homeDiv = document.createElement("div");
     homeDiv.classList = "home-container";
